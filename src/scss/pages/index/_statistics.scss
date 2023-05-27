@@ -148,6 +148,10 @@
           font-size: 14px;
           line-height: 20px;
         }
+        @media (max-width: 360px) {
+          width: 126px;
+          word-wrap: break-word;
+        }
       }
     }
   }
