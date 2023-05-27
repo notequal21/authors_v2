@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'Авторы | О Компании',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      @@include('components/_preloader.html')
+      @@include('components/header-dark.html')
+
+      @@include('pages/about/_main.html')
+      @@include('pages/about/_about.html')
+      @@include('pages/about/_mission.html')
+      @@include('pages/about/_values.html')
+
+    </div>
+    <footer class="footer no-border">
+      <div class="footer__watermark">
+        <div class="footer__watermark-text">
+          Разработано студией <br> digital-маркетинга:
+        </div>
+        <div class="footer__watermark-logo">
+          <img src="./img/footer/watermark-logo.svg" alt="">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="footer-body">
+          <div class="footer-col">
+            <div class="footer-body__logo">
+              <img src="./img/footer/logo.svg" alt="">
+            </div>
+            <div class="footer-body__links">
+              <a href="">Политика конфиденциальности</a>
+              <a href="">Авторы настоящего</a>
+            </div>
+            <div class="footer-body__year">2023 ©</div>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col__title">навигация</div>
+            <div class="footer-col__links">
+              <div class="footer-col__links-col">
+                <a href="">Главная</a>
+                <a href="">История</a>
+                <a href="">Наша команда</a>
+              </div>
+              <div class="footer-col__links-col">
+                <a href="">Проекты</a>
+                <a href="">Для застройщиков</a>
+                <a href="">Карьера</a>
+              </div>
+            </div>
+            <div class="footer-col__btn btn btn_dark">
+              предложить участок
+            </div>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col__title">контакты</div>
+            <div class="footer-col__info">
+              <div class="footer-col__info-item">
+                <span class="_title">Адрес:</span>
+                <span class="_link"> ул. Островского 27 <br> (Коворкинг Func)</span>
+              </div>
+              <div class="footer-col__info-item">
+                <span class="_title">Телефон: </span>
+                <a href="tel:+78435587261" class="_link">+7 (843) 558-72-61</a>
+              </div>
+              <div class="footer-col__info-item">
+                <span class="_title">E-mail: </span>
+                <a href="mailto:2info@avtor-dev.ru" class="_link">2info@avtor-dev.ru</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

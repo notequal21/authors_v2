@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'Авторы | Главная',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      @@include('components/_preloader.html')
+      @@include('components/modals/_callback.html')
+      @@include('components/header.html')
+
+      @@include('pages/index/_main.html')
+      @@include('pages/index/_about.html')
+      @@include('pages/index/_statistics.html')
+      @@include('pages/index/_wecreate.html')
+      <div class="container">
+        <div class="section-devider">
+          <img src="./img/icons/devider-title.svg" alt="">
+        </div>
+      </div>
+      @@include('pages/index/_partners.html')
+      @@include('pages/index/_partners-trust.html')
+      @@include('pages/index/_founders.html')
+      @@include('pages/index/_history.html')
+      @@include('pages/index/_partners-logos.html')
+      @@include('pages/index/_services.html')
+
+    </div>
+    @@include('components/footer.html')
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

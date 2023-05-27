@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'Авторы | Команда',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <!-- @@include('components/_preloader.html') -->
+      @@include('components/header-dark.html')
+
+      @@include('pages/team/_founders.html')
+      <div class="container">
+        <div class="section-devider">
+          <img src="./img/icons/devider-title.svg" alt="">
+        </div>
+      </div>
+      @@include('pages/team/_leaders.html')
+      @@include('pages/team/_team.html')
+
+    </div>
+    @@include('components/footer.html')
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

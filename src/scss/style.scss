@@ -1,0 +1,119 @@
+// -------- imports --------
+@import 'fonts';
+@import 'components/_fonts';
+@import 'components/_normalize.scss';
+@import 'components/_mixins.scss';
+@import 'components/_variables.scss';
+@import 'components/_variables.scss';
+@import 'components/_header.scss';
+@import 'components/_footer.scss';
+@import 'components/_preloader.scss';
+@import 'components/_ui.scss';
+@import 'pages/index/_main.scss';
+@import 'pages/index/_about.scss';
+@import 'pages/index/_statistics.scss';
+@import 'pages/index/_wecreate.scss';
+@import 'pages/index/_partners.scss';
+@import 'pages/index/_founders.scss';
+@import 'pages/index/_history.scss';
+@import 'pages/index/_partners-logos.scss';
+@import 'pages/index/_services.scss';
+@import 'pages/about/_main.scss';
+@import 'pages/about/_mission.scss';
+@import 'pages/about/_about.scss';
+@import 'pages/about/_values.scss';
+@import 'pages/team/_founders.scss';
+@import 'pages/team/_leaders.scss';
+@import 'pages/team/_team.scss';
+@import 'pages/notfound.scss';
+@import 'components/modals/callback.scss';
+@import 'components/_aos.scss';
+
+// fonts --------- &display=swap || &subset=cyrillic-ext
+// throught plugin
+
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+@import '../../node_modules/swiper/modules/effect-fade/effect-fade.scss';
+
+::selection {
+}
+
+body {
+  background: #f6f6f6;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1356px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (max-width: 1200px) {
+    padding: 0 28px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+._sitemap {
+  height: 100vh;
+  padding: 50px 0;
+  background-color: rgb(58, 58, 58);
+
+  &-con {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media (max-width: 767px) {
+      padding: 0 50px;
+    }
+  }
+  &-body {
+    ol {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      li {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+
+        @media (max-width: 767px) {
+          font-size: 22px;
+        }
+
+        &:not(:first-child) {
+          margin: 15px 0 0;
+        }
+      }
+    }
+
+    &__item {
+      color: #fff;
+      transition: all 0.3s;
+
+      &:hover {
+        color: rgb(179, 203, 255);
+      }
+    }
+  }
+}

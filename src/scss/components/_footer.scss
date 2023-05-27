@@ -1,0 +1,257 @@
+.footer {
+  position: relative;
+  margin: 80px 0 0;
+
+  &__watermark {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 76px;
+
+    border-right: 10px solid #14d85e;
+    padding: 0 42px 0 0;
+
+    @media (max-width: 1200px) {
+      border-right: 16px solid #14d85e;
+      padding: 0 76px 0 0;
+      bottom: 72px;
+    }
+
+    @media (max-width: 767px) {
+      justify-content: center;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, 0);
+      border-right: none;
+      padding: 0 0 50px;
+      max-width: 400px;
+      justify-content: space-between;
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: auto;
+        height: 8px;
+        bottom: 0px;
+        right: -50vw;
+        left: -50vw;
+        background-color: #14d85e;
+      }
+    }
+
+    @media (max-width: 430px) {
+      padding: 0 15px 50px;
+    }
+
+    &-text {
+      font-family: 'TT Norms';
+      font-size: 14px;
+      line-height: 18px;
+      color: #131411;
+      opacity: 0.34;
+    }
+
+    &-logo {
+      margin: 0 0 0 20px;
+    }
+  }
+
+  &-body {
+    display: flex;
+    padding: 100px 0 70px;
+    border-top: 1px solid #d8d8d8;
+
+    @media (max-width: 1200px) {
+      padding: 68px 0 70px;
+    }
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      padding: 60px 0 144px;
+
+      &.no-border {
+        border: none;
+      }
+    }
+
+    &__logo {
+      width: 204px;
+
+      @media (max-width: 1200px) {
+        width: 160px;
+      }
+
+      @media (max-width: 991px) {
+        width: 170px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      margin: 24px 0 0;
+
+      a {
+        font-family: 'TT Norms';
+        font-size: 14px;
+        line-height: 140%;
+        color: #131411;
+        opacity: 0.6;
+
+        &:not(:first-child) {
+          margin: 1px 0 0;
+        }
+      }
+    }
+
+    &__year {
+      margin: 18px 0 0;
+
+      font-family: 'TT Norms';
+      font-size: 16px;
+      line-height: 22px;
+      color: #131411;
+      opacity: 0.6;
+    }
+  }
+
+  &-col {
+    &:nth-child(2) {
+      margin: 0 auto 0 120px;
+
+      @media (max-width: 1200px) {
+        margin: 0 auto 0 30px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+
+      &:not(:first-child) {
+        margin: 40px auto 0;
+      }
+
+      &:nth-child(1) {
+        order: 3;
+        margin: 40px auto 0;
+      }
+      &:nth-child(2) {
+        order: 1;
+        margin: 0 auto;
+      }
+      &:nth-child(3) {
+        order: 2;
+      }
+    }
+
+    &__title {
+      font-family: 'TT Norms';
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: #d8d8d8;
+
+      margin: 0 0 20px;
+    }
+
+    &__links {
+      display: flex;
+
+      &-col {
+        &:not(:first-child) {
+          margin: 0 0 0 75px;
+
+          @media (max-width: 1200px) {
+            margin: 0 0 0 50px;
+          }
+        }
+
+        a {
+          display: block;
+          font-family: 'TT Norms';
+          font-size: 18px;
+          line-height: 140%;
+          color: #131411;
+
+          @media (max-width: 1200px) {
+            font-size: 16px;
+            line-height: 22px;
+          }
+
+          &:not(:first-child) {
+            margin: 12px 0 0;
+
+            @media (max-width: 1200px) {
+              margin: 16px 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      margin: 50px 0 0;
+      width: 306px;
+
+      @media (max-width: 1200px) {
+        margin: 40px 0 0;
+        width: 296px;
+      }
+
+      @media (max-width: 991px) {
+        margin: 30px 0 0;
+        width: 100%;
+      }
+    }
+
+    &__info {
+      &-item {
+        font-family: 'TT Norms';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+
+        @media (max-width: 1200px) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        &:not(:first-child) {
+          margin: 14px 0 0;
+
+          @media (max-width: 1200px) {
+            margin: 16px 0 0;
+          }
+        }
+
+        ._title {
+          color: #131411;
+        }
+        ._link {
+          font-weight: 400;
+          color: #131411;
+          margin: 0 0 0 2px;
+
+          br {
+            display: none;
+
+            @media (max-width: 380px) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

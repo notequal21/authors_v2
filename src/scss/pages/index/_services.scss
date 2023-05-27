@@ -1,0 +1,123 @@
+.services {
+  margin: 180px 0 0;
+
+  @media (max-width: 1200px) {
+    margin: 160px 0 0;
+  }
+  @media (max-width: 950px) {
+    margin: 120px 0 0;
+  }
+
+  &__title {
+  }
+  &-body {
+    margin: 40px 0 0;
+
+    @media (max-width: 1200px) {
+      margin: 20px 0 0;
+    }
+    @media (max-width: 950px) {
+      margin: 10px 0 0;
+    }
+
+    &__item {
+      padding: 43px 0;
+      display: flex;
+
+      @media (max-width: 1200px) {
+        padding: 40px 0;
+      }
+
+      @media (max-width: 950px) {
+        padding: 30px 0;
+      }
+
+      &:not(:first-child) {
+        border-top: 1px solid rgba($color: #131411, $alpha: 0.1);
+      }
+
+      &-num {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        background: #f6f6f6;
+        border: 1px solid #131411;
+        border-radius: 50%;
+
+        font-family: 'TT Norms';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #131411;
+
+        @media (max-width: 950px) {
+          width: 40px;
+          height: 40px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      &-con {
+        display: flex;
+        width: 100%;
+
+        @media (max-width: 950px) {
+          margin: 0 0 0 32px;
+          flex-direction: column;
+        }
+      }
+
+      &-title {
+        margin: 0 0 0 44px;
+        font-family: 'Cormorant Unicase';
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #131411;
+
+        @media (max-width: 1200px) {
+          margin: 0 0 0 32px;
+          font-size: 32px;
+          line-height: 40px;
+        }
+        @media (max-width: 950px) {
+          margin: 0;
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+
+      &-text {
+        max-width: 780px;
+        margin: 0 0 0 auto;
+        padding: 0 0 0 30px;
+
+        font-family: 'TT Norms';
+        font-size: 20px;
+        line-height: 28px;
+        color: #131411;
+
+        @media (max-width: 1200px) {
+          max-width: 590px;
+
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        @media (max-width: 950px) {
+          max-width: 100%;
+          margin: 12px 0 0;
+          padding: 0;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

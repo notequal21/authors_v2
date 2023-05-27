@@ -1,0 +1,96 @@
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f6f6;
+  padding: 12px 24px;
+
+  font-family: 'TT Norms';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #cccccc;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 8px 13px;
+
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &_dark {
+    background: #131411;
+    color: #f6f6f6;
+
+    &:hover {
+      background: #5c5c5c;
+    }
+  }
+}
+
+.title {
+  font-family: 'Cormorant Unicase';
+  font-weight: 300;
+  font-size: 52px;
+  line-height: 60px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #131411;
+
+  @media (max-width: 1200px) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media (max-width: 767px) {
+    letter-spacing: 1px;
+    font-size: 36px;
+    line-height: 40px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.section-devider {
+  margin: 120px 0 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1200px) {
+    margin: 100px 0 90px;
+  }
+  @media (max-width: 767px) {
+    margin: 100px 0 65px;
+  }
+
+  img {
+    margin: 0 24px;
+    transform: translate(0, -4px);
+
+    @media (max-width: 767px) {
+      margin: 0 20px;
+      height: 12px;
+      transform: translate(0, -2px);
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    flex: 1 1 auto;
+    height: 1px;
+    background-color: #d8d8d8;
+  }
+}
