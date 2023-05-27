@@ -124,7 +124,7 @@
     align-items: center;
     transition: all 0.3s ease;
 
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       padding: 0 0 14px;
     }
 
@@ -175,7 +175,7 @@
       margin: 0 16px;
 
       @media (max-width: 991px) {
-        padding: 136px 0 50px;
+        padding: 136px 0 100px;
         position: fixed;
         z-index: -1;
         top: 0;
@@ -232,6 +232,7 @@
           @media (max-width: 991px) {
             font-size: 20px;
             line-height: 24px;
+            white-space: nowrap;
           }
 
           &:not(:first-child) {
