@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'Авторы | Новости',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      @@include('components/_preloader.html')
+      @@include('components/modals/_callback.html')
+      @@include('components/header-dark.html')
+
+      @@include('pages/news-detail/content.html')
+
+    </div>
+    @@include('components/footer.html')
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

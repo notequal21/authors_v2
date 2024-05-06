@@ -15,3 +15,4 @@ functions.preloader();
 functions.callbackModal();
 functions.burger();
 functions.AOSanim();
+functions.yandexMap();

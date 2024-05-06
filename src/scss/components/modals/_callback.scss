@@ -20,6 +20,52 @@
     transform: scale(1) translate(0);
   }
 
+  &.manage_form {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    background-color: #131411;
+    height: auto;
+    padding: 180px 0 200px;
+    margin: 60px 0 0;
+
+    opacity: 1;
+    pointer-events: unset;
+    transform: scale(1) translate(0);
+    transition: all 0.4s ease;
+
+    @media (max-width: 767px) {
+      padding: 100px 0;
+      margin: 40px 0 0;
+    }
+
+    .callback_modal-body {
+      min-height: 0;
+      padding: 0;
+    }
+
+    .callback_modal-body__title,
+    .callback_modal-body__subtitle,
+    .callback_modal-body__form-btn {
+      color: #fff;
+
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+    .callback_modal-body__form {
+      label {
+        input {
+          color: #fff;
+        }
+      }
+    }
+  }
+
   &__a {
     position: absolute;
     right: 0;

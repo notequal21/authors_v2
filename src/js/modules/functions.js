@@ -528,3 +528,63 @@ export const AOSanim = () => {
     once: true,
   });
 };
+
+export const yandexMap = () => {
+  if (document.querySelector('.contacts-body__map-item')) {
+    const mapElem = document.querySelector('.contacts-body__map-item');
+
+    let center = [55.788145, 49.116799];
+
+    function init() {
+      let map = new ymaps.Map(mapElem, {
+        center: center,
+        zoom: 17,
+      });
+
+      let MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        `
+        // <div class="custom__placemark">
+        // <img src="./img/header/logo.png" alt="" />
+        // $[properties.iconContent]
+        // </div>
+      ]
+        `
+      );
+
+      let myPlacemarkWithContent = new ymaps.Placemark(
+        center,
+        // {
+        //   iconContent: '+1 млн',
+        // },
+
+        {},
+        {
+          // iconLayout: 'default#imageWithContent',
+          iconLayout: 'default#image',
+          iconImageHref: './img/icons/geo.svg',
+          iconImageSize: [35, 39],
+          // iconImageOffset: [-17, -19],
+          iconContentOffset: [15, 15],
+          // iconContentLayout: MyIconContentLayout,
+        }
+      );
+
+      map.controls.remove('geolocationControl'); // удаляем геолокацию
+      map.controls.remove('searchControl'); // удаляем поиск
+      map.controls.remove('trafficControl'); // удаляем контроль трафика
+      map.controls.remove('typeSelector'); // удаляем тип
+      map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+      // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+      map.controls.remove('rulerControl'); // удаляем контрол правил
+      // map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+      // map.geoObjects.add(placemark);
+      // map.geoObjects.add(placemark);
+      map.geoObjects.add(myPlacemarkWithContent);
+
+      // placemark.balloon.open();
+    }
+
+    ymaps.ready(init);
+  }
+};

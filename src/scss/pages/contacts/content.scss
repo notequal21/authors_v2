@@ -1,0 +1,202 @@
+.contacts {
+  margin: 130px 0 0;
+
+  @media (max-width: 1200px) {
+    margin: 122px 0 0;
+  }
+  @media (max-width: 767px) {
+    margin: 96px 0 0;
+  }
+
+  &-body {
+    display: flex;
+    gap: 134px;
+
+    @media (max-width: 1200px) {
+      gap: 104px;
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__map {
+      position: relative;
+      flex: 1 1 100%;
+      background-color: rgb(218, 218, 218);
+      @media (max-width: 767px) {
+        flex: 0 0 auto;
+        height: 0;
+        padding: 0 0 100%;
+      }
+
+      &-item {
+        position: absolute;
+        inset: 0;
+        filter: grayscale(1) brightness(1) invert(0);
+      }
+    }
+    &__content {
+      flex: 0 0 386px;
+      margin: 0 32px 0 0;
+      padding: 0 0 16px;
+
+      @media (max-width: 1200px) {
+        padding: 0 0 8px;
+        margin: 0;
+      }
+
+      &-title {
+        font-family: 'Cormorant Unicase', sans-serif;
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 115%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #131411;
+        margin: 0 0 48px;
+
+        &._mobile {
+          display: none;
+          @media (max-width: 767px) {
+            display: block;
+            margin: 0 0 6px;
+          }
+        }
+
+        @media (max-width: 1200px) {
+          font-size: 40px;
+          margin: 0 0 40px;
+        }
+        @media (max-width: 767px) {
+          display: none;
+          font-size: 36px;
+        }
+      }
+
+      &-row {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+
+        &:not(:first-child) {
+          margin: 26px 0 0;
+          @media (max-width: 767px) {
+            margin: 24px 0 0;
+          }
+        }
+        @media (max-width: 767px) {
+          &:nth-child(2) {
+            margin: 0;
+          }
+
+          &._btns {
+            margin: 32px 0 0;
+          }
+        }
+
+        ._label {
+          font-family: 'TT Norms', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 137%;
+          color: #131411;
+          opacity: 0.5;
+          @media (max-width: 767px) {
+            font-size: 14px;
+          }
+        }
+        ._link {
+          font-family: 'TT Norms', sans-serif;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 127%;
+          text-transform: uppercase;
+          color: #131411;
+
+          transition: all 0.3s ease;
+
+          @media (max-width: 767px) {
+            font-size: 18px;
+          }
+
+          &:hover {
+            color: #5c5c5c;
+          }
+
+          &-list {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+            max-width: 356px;
+
+            @media (max-width: 767px) {
+              width: 100%;
+              gap: 16px;
+            }
+
+            .btn {
+              flex: 0 0 calc(50% - 12px);
+
+              @media (max-width: 767px) {
+                flex: 0 0 calc(50% - 8px);
+                padding: 10px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      &-btn {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        font-family: 'TT Norms', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 133%;
+        text-transform: uppercase;
+        color: #131411;
+
+        @media (max-width: 767px) {
+          font-size: 20px;
+          gap: 20px;
+        }
+
+        &:hover {
+          span {
+            svg {
+              transform: translate(0, -50%);
+            }
+          }
+        }
+
+        &:not(:first-child) {
+          margin: 52px 0 0;
+          @media (max-width: 767px) {
+            margin: 32px 0 0;
+          }
+        }
+
+        span {
+          flex: 0 0 auto;
+          position: relative;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          border: 1px solid #d8d8d8;
+
+          svg {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-8px, -50%);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}
